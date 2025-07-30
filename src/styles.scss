@@ -1,11 +1,11 @@
-@use '@angular/material' as mat;
+// Import the themes
+@import 'styles/themes';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// Import tailwind
+@import 'styles/tailwind';
 
-@include mat.elevation-classes();
-@include mat.app-background();
+// Import Angular Material overrides
+@import 'styles/angular-material';
 
 html,
 body {
@@ -13,9 +13,5 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
-body {
-  background: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
+  font-family: 'Inter var', Roboto, 'Helvetica Neue', sans-serif;
 }
