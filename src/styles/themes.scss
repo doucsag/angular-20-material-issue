@@ -248,15 +248,11 @@ $dark-base: (
   /* Generate and encapsulate Angular Material themes */
   #{map.get($theme, selector)} .light,
   #{map.get($theme, selector)}.light {
-    @include mat.elevation-classes();
-    @include mat.app-background();
     @include mat.all-component-colors($light-theme);
   }
 
   #{map.get($theme, selector)} .dark,
   #{map.get($theme, selector)}.dark {
-    @include mat.elevation-classes();
-    @include mat.app-background();
     @include mat.all-component-colors($dark-theme);
   }
 }
