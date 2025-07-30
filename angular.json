@@ -45,6 +45,9 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
             "assets": [
               {
                 "glob": "**/*",
@@ -52,11 +55,9 @@
               }
             ],
             "styles": [
+              "src/styles/tailwind.scss",
               "src/styles/themes.scss",
-              "src/styles/vendors.scss",
-              "src/styles/main.scss",
-              "src/styles/styles.scss",
-              "src/styles/tailwind.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },

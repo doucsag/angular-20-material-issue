@@ -22,11 +22,23 @@
         </button>
       }
       <span>angular-material-19-theming</span>
-      <p class="theme-toggle">
+      <span class="spacer"></span>
+      <div class="theme-controls">
+        <button mat-icon-button [matMenuTriggerFor]="themeMenu" aria-label="Select theme">
+          <mat-icon>palette</mat-icon>
+        </button>
+        <mat-menu #themeMenu="matMenu">
+          <button mat-menu-item (click)="setTheme('default')">Default</button>
+          <button mat-menu-item (click)="setTheme('brand')">Brand</button>
+          <button mat-menu-item (click)="setTheme('teal')">Teal</button>
+          <button mat-menu-item (click)="setTheme('rose')">Rose</button>
+          <button mat-menu-item (click)="setTheme('purple')">Purple</button>
+          <button mat-menu-item (click)="setTheme('amber')">Amber</button>
+        </mat-menu>
         <mat-icon>light_mode</mat-icon>
         <mat-slide-toggle (change)="onThemeChange($event)"></mat-slide-toggle>
         <mat-icon>dark_mode</mat-icon>
-      </p>
+      </div>
 
     </mat-toolbar>
     <ng-content></ng-content>
